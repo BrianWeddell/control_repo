@@ -4,8 +4,8 @@ node 'master.puppet.vm' {
   include role::master_server
   file {'/root/README':
     ensure => file,
-    content => $facts['os.family']
-    #content => "System uptime in seconds is,{"$system_uptime.seconds}","."
+    #content => $facts['os.family']
+    content => "System uptime in seconds is $facts['system_uptime.seconds]."
   }
 }
 node /^web/ {
