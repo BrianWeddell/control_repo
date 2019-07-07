@@ -5,7 +5,7 @@ node 'master.puppet.vm' {
   file {'/root/README':
     ensure => file,
     #content => $facts['os.family']
-    content => "System uptime in seconds is $facts['system_uptime.seconds]."
+    content => "System uptime in seconds is $facts['system_uptime.seconds']."
   }
 }
 node /^web/ {
