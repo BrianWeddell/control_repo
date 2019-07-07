@@ -5,6 +5,7 @@ node 'master.puppet.vm' {
   file {'/root/README':
     ensure => file,
     content => $os.family
+  }
 }
 node /^web/ {
   include role::app_server
