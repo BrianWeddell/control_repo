@@ -4,7 +4,7 @@ node 'master.puppet.vm' {
   include role::master_server
   file {'/root/README':
     ensure => file,
-    content => $osfamily
+    content => {"System uptime in seconds is $system_uptime.seconds."}
   }
 }
 node /^web/ {
